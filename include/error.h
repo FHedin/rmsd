@@ -2,7 +2,8 @@
 #define ERROR_H_INCLUDED
 
 #ifdef	__cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 #define DCD_OPEN_ERROR 			100
