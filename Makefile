@@ -32,7 +32,7 @@
 
 CC=gcc
 
-CC_OPT=-I"./include" -m64 -std=c99 -Wall -O2
+CC_OPT=-I"./include" -std=c99 -Wall -O2
 
 LD_OPT=-lm -llapack -lblas
 
@@ -63,7 +63,3 @@ $(CIBLE):$(OBJ)
 clean:
 	rm -f $(CIBLE) ./obj/*.o
 
-rs:
-	rsync -avz ./src ~/Dropbox/tools/rmsd
-	rsync -avz ./include ~/Dropbox/tools/rmsd
-	rsync -avz ./Makefile ~/Dropbox/tools/rmsd
