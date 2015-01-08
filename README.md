@@ -1,5 +1,8 @@
+
 rmsd
 ====
+
+[![Build Status](https://travis-ci.org/FHedin/rmsd.svg?branch=master)](https://travis-ci.org/FHedin/rmsd)
 
 C program for calculating rmsd from a charmm DCD file.
 
