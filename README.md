@@ -4,6 +4,12 @@ rmsd
 
 [![Build Status](https://travis-ci.org/FHedin/rmsd.svg?branch=master)](https://travis-ci.org/FHedin/rmsd)
 
+<a href="https://scan.coverity.com/projects/4502">
+  <img alt="Coverity Scan Build Status"
+  src="https://scan.coverity.com/projects/4502/badge.svg"/>
+</a>
+
+
 C program for calculating rmsd from a charmm DCD file.
 
 

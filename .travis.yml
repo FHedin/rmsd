@@ -1,9 +1,26 @@
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "aHnN+T0AF+Pilzy6/o1v6x28A0RZt/ut7hPIXbBVadlORZjkn0lZ2tql20c225j12KPJ6cv5xMMiP1XCHsk8Xd1n9p/iGY44mrkMRf2dZPs0laJdVXm9LvdfrsUT0JSZrDMsP7x60YVcTE6PSStf1gNiOoJxczxfn9fcwaS5sCU="
+
+
 language: c
 compiler:
-  - gcc
-  - clang
+    - gcc
+    - clang
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y libblas-dev libatlas-dev liblapack-dev
+    - sudo apt-get update -qq
+    - sudo apt-get install -y libblas-dev libatlas-dev liblapack-dev
 # Change this to your needs
-script: make
+addons:
+    coverity_scan:
+        project:
+            name: "FHedin/rmsd"
+            description: "Build submitted via Travis CI"
+        notification_email: hedin.florent@gmail.com
+        build_command: "make -j4"
+        branch_pattern: master
+
+script:
+    - make -j4
