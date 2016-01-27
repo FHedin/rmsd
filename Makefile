@@ -32,7 +32,7 @@
 
 #CC=gcc
 
-CC_OPT=-I"./include" -std=c99 -Wall -Wextra -O2
+CC_OPT=-I"./include" -std=c99 -Wall -Wextra -march=native -g -O2
 
 LD_OPT=-lm -llapack -lblas
 
